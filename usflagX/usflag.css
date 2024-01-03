@@ -1,0 +1,33 @@
+*{
+    margin: auto;
+    padding: auto;
+    margin-top: 5vh;
+}
+table{
+    height: 303.1px;
+    width: 100%;
+    
+}
+tr:nth-child(odd){
+    background-color: #bf0b30;
+}
+tr:nth-child(even){
+    background-color:#fff;
+}
+.star{
+    background-color: #002768;
+    width: 184px;
+    height: 149px;
+    margin-top: -302.3px;
+    margin-left: 0px;
+}
+p{
+    color: aliceblue;
+    font-size: 15px;
+    line-height: 4px;
+    letter-spacing: 8px;
+    text-align: justify;
+    padding:10px;
+    margin:1px;
+   
+}
