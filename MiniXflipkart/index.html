@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart</title>
+  <link rel="icon" type="icon" href="./image/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .social-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .social-logo i {
+    font-size: 26px;
+    color: #000080;
+  }
+
+  .custom-check::before {
+    content: "\2714";
+    /* Unicode character for checkmark */
+    color: green;
+    /* Color of the checkmark */
+    font-weight: bold;
+    /* Bold font for the checkmark */
+    margin-right: 5px;
+    /* Spacing between checkmark and text */
+  }
+</style>
+
+<body>
+  <!-- Start header and nav  Section-->
+  <div class=" header">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <div class="container">
+        <a class="navbar-brand brand me-5" href="index.html"><img class="logo" src="./image/logo.png" alt="logo"
+            height="60px" width="60px">Flipkart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="d-flex">
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit"><i class="fa fa-search text-white fs-4"></i></button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link menu up fs-4 text-white" aria-current="page" href="#"><i class="fa fa-home me-1"
+                  aria-hidden="true"></i>Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link menu up fs-4 text-white"><i class="fa fa-shopping-bag me-1"
+                  aria-hidden="true"></i>Order</a>
+            </li>
+
+            <li class="nav-item up cart-nav" style="display: block;  position: relative;">
+              <span id="add-cart-qty"
+                style="background-color: red; color: white; border-radius: 50px; height: 20px; display: none; width: 10px; z-index: 9; position: absolute; left: 80px; bottom: 30px;">0</span>
+              <a style="cursor: pointer;" class="nav-link menu fs-4 text-white"><i class="fa fa-inbox me-1"
+                  aria-hidden="true"></i>Cart </a>
+            </li>
+          </ul>
+          <button class="btn rounded-5 border-lg btn-outline-warning px-4 fw-bold text-white fs-5" id="log-home"
+            data-bs-toggle="modal" data-bs-target="#login_modal">Login</button>
+
+          <div class="nav-item dropdown" id="drop-user" style="display: none; ">
+            <a class="nav-link " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="padding-left:0px;">
+              <img src="/image/front-user.png" alt="" style="width: 30px;">
+            </a>
+            <ul class="dropdown-menu" style="margin-left: -90px;">
+              <li>
+                <a href="" id="acct-details" class="dropdown-item" data-bs-toggle="modal">
+                  <i class="fa fa-drivers-license" style="font-size:17px ;margin-right: 5px;"></i> Account Details</a>
+              </li>
+              <li>
+                <a href="" class="dropdown-item" value="Customer Support"> <i class="fa fa-phone"
+                    style="font-size:17px ;margin-right: 5px;"></i> Customer Support</a>
+              </li>
+              <li id="setting_drop">
+                <a class="dropdown-item setting_drop" href="#"><i class="fa fa-gear"
+                    style="font-size:17px ;margin-right: 1px;"></i>Settings</a>
+                <div class="side-drop " style="z-index: -6;">
+                  <ul>
+                    <a href="" class="dropdown-item"><i class="fa fa-edit"
+                        style="font-size:17px ;margin-right: 5px;"></i>Password Change</a>
+              </li>
+              <li>
+                <a href="" class="dropdown-item"><i class="fa fa-shield"
+                    style="font-size:17px ;margin-right: 10px;"></i>Tems & Conditions</a>
+              </li>
+              <li>
+                <a href="" data-bs-toggle="modal" data-bs-target="#confrim-log-out" id="log-out"
+                  class="dropdown-item"><i class="fa fa-sign-out" style="font-size:17px ;margin-right: 10px;"></i>Log
+                  Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- End header and nav  Section-->
+  <!-- Start reponsive table Section-->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href="#men-section"><img class="" src="./image/men.png" alt="men" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Men</p>
+      </div>
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href="#women-section"><img class="" src="./image/women.png" alt="women" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Women</p>
+      </div>
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href=""><img class="men radi" src="./image/dog-67.png" alt="animal" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Animal</p>
+      </div>
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href=""><img class="men radi" src="./image/sports.png" alt="sports" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Sports</p>
+      </div>
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href=""><img class="men radi" src="./image/child.png" alt="child" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Children</p>
+      </div>
+      <div class="col-6 col-md-2 text-center p-5">
+        <a href=""><img class="men radi" src="./image/electrnic.png" alt="child" class="img-fluid"
+            style="max-height: 100px;"> </a>
+        <p class="m-0">Computer</p>
+      </div>
+    </div>
+  </div>
+  <!-- End reponsive table Section-->
+
+  <!-- Start Cursoul section  -->
+  <div class="container-fluid">
+    <div class="row">
+      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="height: 400px;">
+            <img src="./image/banner5.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="height: 400px;">
+            <img src="./image/banner4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="height: 400px;">
+            <img src="./image/flipkart-offers-banner.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- End Cursoul section  -->
+  
+  <!-- Start Card Section  -->
+  <div class="container my-5">
+    <div class="justify-content-center">
+      <h1 class="text-center">Special Offer</h1>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="./image/card images/mi2.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Redmi 5 pro</h5>
+            <h6>Price:<span class="price">10000</span></h6>
+            <div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(10000)</span>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-primary">Details</a>
+              <a href="#" class="btn btn-warning">Add Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="./image/card images/saree.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Kanchi Saree</h5>
+            <h6>Price:<span class="price">800</span></h6>
+            <div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(1000)</span>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-primary">Details</a>
+              <a href="#" class="btn btn-warning">Add Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="./image/card images/T-shirt.png" class="card-img-top" alt="..." style="height: 285px;">
+          <div class="card-body">
+            <h5 class="card-title">Black T-shirt</h5>
+            <h6>Price:<span class="price">400</span></h6>
+            <div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(3000)</span>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-primary">Details</a>
+              <a href="#" class="btn btn-warning">Add Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="./image/card images/teddy.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Teddy</h5>
+            <h6>Price:<span class="price">600</span></h6>
+            <div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(1000)</span>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-primary">Details</a>
+              <a href="#" class="btn btn-warning">Add Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Card section -->
+  <hr>
+  <!-- Start Men Section -->
+  <section id="men-section">
+    <div class="container mb-5">
+      <div class="row">
+        <div class="justify-content-center">
+          <h1 class="text-center">Men section</h1>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./men section/shirt2.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">T-Shirt</h5>
+                <h6>Price:<span class="price">300</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./men section/shirt1.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Blue Shirt</h5>
+                <h6>Price:<span class="price">1000</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(7000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./men section/tshirt1.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">T-Shirt</h5>
+                <h6>Price:<span class="price">400</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(2000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./men section/whiteshirt.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">White Shite</h5>
+                <h6>Price:<span class="price">1400</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(5000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Men Section -->
+  <hr>
+  <!--Start women section-->
+  <section id="women-section">
+    <div class="container mb-5">
+      <div class="row">
+        <div class="justify-content-center">
+          <h1 class="text-center">Women section</h1>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./women section/paint.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Kurutas</h5>
+                <h6>Price:<span class="price">600</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./women section/saree2.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Cotton Saree</h5>
+                <h6>Price:<span class="price">700</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./women section/saree3.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Saree </h5>
+                <h6>Price:<span class="price">10000</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./women section/women3.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Kuruta & Dupatta</h5>
+                <h6>Price:<span class="price">1000</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End women section-->
+
+  <!--Contact Section-->
+  <section class="bg-secondary pb-5">
+    <h2 class="text-white text-center fst-italic fw-bold bg-primary p-3">Contact Us</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-10 my-4">
+              <img src="./image/leftside.jpg" alt="leftside" class="img-fluid">
+            </div>
+          </div>
+          <div class="social-links-container align-items-center">
+            <h3 class="text-white fw-bold fst-italic">Social Links</h3>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social-logo">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+              <a href="#" class="social-logo">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a href="#" class="social-logo">
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a href="#" class="social-logo">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- <h3 class="text-center text-white">Feedback</h3> -->
+          <form action="" class="text-info fw-bold">
+            <div class="form-group pb-2">
+              <label for="uname">Name :</label>
+              <input type="text" class="form-control mt-2" name="uname" id="uname" placeholder="Enter Name">
+            </div>
+            <div class="form-group pb-2">
+              <label for="email">Email :</label>
+              <input type="text" class="form-control mt-2" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group pb-2">
+              <label for="msg">Message :</label>
+              <textarea name="msg" class="form-control mt-2" id="msg" cols="20" rows="8"></textarea>
+            </div>
+            <div class="form-group mt-2">
+              <button type="submit" class="btn btn-primary px-5 fw-bold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Contact section-->
+  <!-- Start footer section -->
+  <footer>
+    <div class="bg-primary py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>About Us</h3>
+            <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
+            <div class="">
+              <ul class="list-unstyled">
+                <li class="my-2"><span class="custom-check"></span> <a href="#"
+                    class="text-white text-decoration-none  fs-5">Home</a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href="#"
+                    class="text-white text-decoration-none  fs-5">About Us</a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href="#"
+                    class="text-white text-decoration-none  fs-5">Career</a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href="#"
+                    class="text-white text-decoration-none  fs-5">Flipkart storeis</a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href="#"
+                    class="text-white text-decoration-none  fs-5">Corprate Information</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3>Group Of Comapny</h3>
+            <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
+            <div>
+              <ul class="list-unstyled">
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none fs-5">Myntra</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none fs-5">Flipkart whole sale</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none fs-5">Clear Trip</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none fs-5">shopy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3>Help Us</h3>
+            <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
+            <div>
+              <ul class="list-unstyled">
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">Payments</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none  fs-5">Shopping</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none  fs-5">Canselation & returns </a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">FAQ</a></li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none  fs-5">Report Ingrigment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class=" col-md-3">
+            <h3>Consumer Policy</h3>
+            <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
+            <div class="">
+              <ul class="list-unstyled">
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">Cancelation & returns </a> </li>
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">Term os use </a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">security</a></li>
+                <li class="my-2"><span class="custom-check"></span> <a href=""
+                    class="text-white text-decoration-none  fs-5">privacy</a> </li>
+                <li class="my-2"><span class="custom-check"></span><a href=""
+                    class="text-white text-decoration-none  fs-5">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid bg-black py-2">
+      <div class="d-flex justify-content-center text-white">
+        <h6> &#169;2024 Flipkart Online Store | All Rights Reserved.</h6>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer section -->
+
+  <!-- Start form modal -->
+  <div class="modal fade" id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-md">
+      <div class="modal-content">
+        <div class="bg-warning p-1 border-lg"></div>
+        <div class="modal-header">
+          <h3 class="modal-title text-center" id="staticBackdropLabel">Welcome To Flipkart</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="log-user" class="form-label">Enter UserName:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="log-user" placeholder="Enter name" name="name">
+                <p class="error" id="login-msg"></p>
+              </div>
+
+              <div class="col-md-4">
+                <label for="log-in-pass" class="form-label">Enter Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" class="form-control" id="log-in-pass" placeholder="Enter Password" name="pass">
+                <p class="error" id="login-pass-msg">
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-primary px-4 fw-bold" id="log_in-model">Login</button>
+              <button type="reset" class="btn btn-danger px-4 fw-bold">Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="d-flex justify-content-between w-100">
+            <span>New Register <a href="#register" class="" data-bs-toggle="modal" data-bs-target="#register">Add
+                User</a></span>
+            <a href="#" class="" data-bs-toggle="modal" data-bs-target="#forget-password">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End form modal -->
+
+  <!-- Start forget password  -->
+  <div class="modal fade" id="forget-password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="bg-warning p-1 border-lg"></div>
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="log-user" class="form-label">Enter UserName:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="log-user" placeholder="Enter name" name="name">
+                <p class="error" id="login-msg"></p>
+              </div>
+              <div class="col-md-4">
+                <label for="log-in-pass" class="form-label">Enter Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" class="form-control" id="log-in-pass" placeholder="Enter Password" name="pass">
+                <p class="error" id="login-pass-msg">
+              </div>
+              <div class="col-md-4">
+                <label for="cpass" class="form-label">Enter Confirm Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" class="form-control" id="cpass" placeholder="Enter confirm Password" name="cpass">
+                <p class="error" id="login-pass-msg">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary px-4 fw-bold" id="log_in-model">Set Password</button>
+            <button type="reset" class="btn btn-danger px-4 fw-bold">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End forget password  -->
+  <!-- Start new user  -->
+  <div class="modal fade  modal-fullscreen" id="register" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="bg-warning p-1 border-lg"></div>
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Welcome to flipkart</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="log-user" class="form-label">Enter Name:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="log-user" placeholder="Enter Name" name="name">
+                <p class="error" id="login-msg"></p>
+              </div>
+              <div class="col-md-4">
+                <label for="email" class="form-label">Enter Email</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+                <p class="error" id="login-msg"></p>
+              </div>
+              <div class="col-md-4">
+                <label for="mobile" class="form-label">Enter Mobile</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile" name="mobile">
+                <p class="error" id="login-msg"></p>
+              </div>
+              <div class="col-md-4">
+                <label for="mobile" class="form-label">Enter Gender</label>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                  <label class="form-check-label" for="male">
+                    Male
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                  <label class="form-check-label" for="female">
+                    Female
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+                  <label class="form-check-label" for="others">
+                    Others
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="mobile" class="form-label">Customer Choice</label>
+              </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="grocery">
+                    <label class="form-check-label" for="grocery">Grocery</label>
+                  </div> 
+                </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="dress">
+                    <label class="form-check-label" for="dress">Dress</label>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="electronic">
+                    <label class="form-check-label" for="electronic">Electronics</label>
+                  </div>
+                </div>
+                <p class="error" id="login-msg"></p>
+              <div class="col-md-4">
+                <label for="log-in-pass" class="form-label">Enter Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" class="form-control" id="log-in-pass" placeholder="Enter Password" name="pass">
+                <p class="error" id="login-pass-msg">
+              </div>
+              <div class="col-md-4">
+                <label for="cpass" class="form-label">Confirm Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" class="form-control" id="cpass" placeholder="Enter confirm password" name="cpass">
+                <p class="error" id="login-pass-msg">
+              </div>
+              <div class="col-md-4">
+                <label for="address" class="form-label">Enter Address:</label>
+              </div>
+              <div class="col-md-8">
+               <textarea name="" id="address" cols="32" rows="4"></textarea>
+                <p class="error" id="login-pass-msg">
+              </div>
+              <div class="col-md-4">
+                <label for="log-user" class="form-label">Enter Nationality</label>
+              </div>
+              <div class="col-md-8">
+                <select  class="form-control custom-select" id="su-state">
+                  <option selected>Select</option>
+                  <option value="Tamilnadu">Tamil Nadu</option>
+                  <option value="Kerala">kerala</option>
+                  <option value="Andhara Pradesh">Andhra pradesh</option>
+                  <option value="Telungana">Telugana</option>
+                  <option value="Karanataka">Karnataka</option>
+                </select>
+                <p class="error" id="login-msg"></p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-primary px-4 fw-bold" id="log_in-model">Register</button>
+              <button type="reset" class="btn btn-danger px-4 fw-bold">Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer " id="user-input-footer">
+          <div class="row">
+            <div class="col-sm-12">
+             <span>Already Have an Account ?</span>
+                <a href="" data-bs-toggle="modal" data-bs-target="#login_modal">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="account">
+    <div class="modal-dialog ">
+      <div class="modal-content" style="background-color: rgb(219, 219, 219);">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Your Account</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table style="width: 100%; ">
+            <tr class="row ">
+              <td class="col-sm-5">
+                Hello Buddy
+              </td>
+              <td class="col-sm-7">
+                <img src="./image/user.jpeg" style="width: 200px; border-radius: 100%;" alt="">
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="col-sm-5">
+                <p> Name</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-name"></p>
+              </td>
+            </tr>
+
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Email</p>
+              </td>
+              <td class="col-sm-7">
+                <p id="ac-mail"></p>
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Phone number</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-ph"></p>
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Address</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-adrs"></p>
+              </td>
+            </tr>
+
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Gender</p>
+              </td>
+
+              <td class="col-sm-7">
+                <p id="ac-gender"></p>
+              </td>
+            </tr>
+
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>State</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-state"></p>
+
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Your choice</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-choice"></p>
+
+              </td>
+            </tr>
+
+
+            <tr class="row">
+              <td class="col-sm-5">
+                <p>Password</p>
+              </td>
+              <td class="col-sm-7">
+
+                <p id="ac-pass"></p>
+
+              </td>
+            </tr>
+
+
+          </table>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-primary" id="user-edit" data-bs-toggle="modal">Edit</button>
+
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- log-out confirm  -->
+  <div class="modal fade" id="confrim-log-out" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body row">
+          <div class="col-sm-12"> Do You want to Log-Out</div>
+          <div class="col-sm-12 ">
+            <button type="button" id="log-o-reload" class="btn btn-primary" style="margin-right: 30px;">Yes</button>
+            <button type="button" class="btn btn-secondary" style="margin-right: 30px;"
+              data-bs-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add cart details  -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="addcard-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="order-check"
+            style="display: block; display: block; font-weight: 700; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            Your Cart</h1>
+          <h1 class="modal-title fs-4" id="check-out-h" style="display: none;">Check Out</h1>
+        </div>
+        <div class="modal-body table-responsive">
+          <table class="table caption-top data-table">
+            <thead>
+              <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Per item Price</th>
+                <th scope="col"></th>
+                <th scope="col">total</th>
+              </tr>
+            </thead>
+            <tbody id="addcart-body">
+            </tbody>
+            <tfoot id="total-amountof-cart" style="margin-top: 30px;">
+              <tr>
+                <th colspan="5">Total</th>
+                <td id="total-add-amount">0</td>
+              </tr>
+            </tfoot>
+          </table>
+          <div id="discout-section" style="display: block;"><input type="checkbox" onclick="discount_fun()"
+              id="discount"> <label for="">Discount
+              Upto 20%</label></div>
+          <!-- <p>Total <span ></span></p> -->
+        </div>
+        <div class="modal-footer row">
+          <div class="col col-sm-4">
+            <button type="button" id="checkout-button" onclick="" class="btn btn-primary">CheckOut</button>
+          </div>
+          <div class="col col-sm-4">
+            <button type="button" class="btn btn-secondary" id="checkout_close" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="checkout-table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="order-check"
+            style="display: block; font-weight: 700; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            CheckOut Details</h1>
+        </div>
+        <div class="modal-body">
+          <table class="table  checkouttable caption-top ">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">total</th>
+              </tr>
+            </thead>
+            <tbody id="checkout-body">
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="2">Total</th>
+                <td id="total-check-amount">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="modal-footer row">
+          <div class="col col-sm-4">
+            <button type="button" id="" onclick="checkouted()" class="btn btn-primary">Buy</button>
+          </div>
+          <div class="col col-sm-4">
+            <button type="button" class="btn btn-secondary" onclick="removedata()" id="checkout_close"
+              data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
