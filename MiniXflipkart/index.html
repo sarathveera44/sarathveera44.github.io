@@ -52,7 +52,7 @@
   <!-- Start header and nav  Section-->
   <div class=" header">
     <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand brand me-5" href="index.html"><img class="logo" src="./image/logo.png" alt="logo"
             height="60px" width="60px">Flipkart</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -62,29 +62,29 @@
 
         <form class="d-flex">
           <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" type="submit"><i class="fa fa-search text-white fs-4"></i></button>
+          <button class="btn" type="submit"><i class="fa fa-search text-white fs-5"></i></button>
         </form>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link menu up fs-4 text-white" aria-current="page" href="#"><i class="fa fa-home me-1"
+              <a class="nav-link menu up fs-5 text-white" aria-current="page" href="#"><i class="fa fa-home me-1"
                   aria-hidden="true"></i>Home</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link menu up fs-4 text-white"><i class="fa fa-shopping-bag me-1"
+              <a class="nav-link menu up fs-5 text-white"><i class="fa fa-shopping-bag me-1"
                   aria-hidden="true"></i>Order</a>
             </li>
 
             <li class="nav-item up cart-nav" style="display: block;  position: relative;">
               <span id="add-cart-qty"
                 style="background-color: red; color: white; border-radius: 50px; height: 20px; display: none; width: 10px; z-index: 9; position: absolute; left: 80px; bottom: 30px;">0</span>
-              <a style="cursor: pointer;" class="nav-link menu fs-4 text-white"><i class="fa fa-inbox me-1"
+              <a style="cursor: pointer;" class="nav-link menu fs-5 text-white"><i class="fa fa-inbox me-1"
                   aria-hidden="true"></i>Cart </a>
             </li>
           </ul>
-          <button class="btn rounded-5 border-lg btn-outline-warning px-4 fw-bold text-white fs-5" id="log-home"
+          <button class="btn rounded-5 border-lg btn-outline-warning px-4 fw-bold text-white fs-6" id="log-home"
             data-bs-toggle="modal" data-bs-target="#login_modal">Login</button>
 
           <div class="nav-item dropdown" id="drop-user" style="display: none; ">
@@ -126,79 +126,83 @@
   </div>
   <!-- End header and nav  Section-->
   <!-- Start reponsive table Section-->
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href="#men-section"><img class="" src="./image/men.png" alt="men" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Men</p>
-      </div>
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href="#women-section"><img class="" src="./image/women.png" alt="women" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Women</p>
-      </div>
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href=""><img class="men radi" src="./image/dog-67.png" alt="animal" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Animal</p>
-      </div>
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href=""><img class="men radi" src="./image/sports.png" alt="sports" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Sports</p>
-      </div>
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href=""><img class="men radi" src="./image/child.png" alt="child" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Children</p>
-      </div>
-      <div class="col-6 col-md-2 text-center p-5">
-        <a href=""><img class="men radi" src="./image/electrnic.png" alt="child" class="img-fluid"
-            style="max-height: 100px;"> </a>
-        <p class="m-0">Computer</p>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href="#men-section"><img class="" src="./image/men.png" alt="men" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Men</p>
+        </div>
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href="#women-section"><img class="" src="./image/women.png" alt="women" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Women</p>
+        </div>
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href=""><img class="men radi" src="./image/dog-67.png" alt="animal" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Animal</p>
+        </div>
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href=""><img class="men radi" src="./image/sports.png" alt="sports" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Sports</p>
+        </div>
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href=""><img class="men radi" src="./image/child.png" alt="child" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Children</p>
+        </div>
+        <div class="col-6 col-md-2 text-center p-5">
+          <a href=""><img class="men radi" src="./image/electrnic.png" alt="child" class="img-fluid"
+              style="max-height: 100px;"> </a>
+          <p class="m-0">Computer</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- End reponsive table Section-->
 
   <!-- Start Cursoul section  -->
-  <div class="container-fluid">
-    <div class="row">
-      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" style="height: 400px;">
-            <img src="./image/banner5.jpg" class="d-block w-100" alt="...">
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 24rem;">
+              <img src="./image/banner5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" style="height: 24rem;">
+              <img src="./image/banner4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" style="height: 24rem;">
+              <img src="./image/flipkart-offers-banner.png" class="d-block w-100" alt="...">
+            </div>
           </div>
-          <div class="carousel-item" style="height: 400px;">
-            <img src="./image/banner4.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" style="height: 400px;">
-            <img src="./image/flipkart-offers-banner.png" class="d-block w-100" alt="...">
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
-  </div>
+  </section>
   <!-- End Cursoul section  -->
   
   <!-- Start Card Section  -->
-  <div class="container my-5">
+  <div class="container mx-auto">
     <div class="justify-content-center">
       <h1 class="text-center">Special Offer</h1>
     </div>
-    <div class="row mt-5">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="./image/card images/mi2.webp" class="card-img-top" alt="...">
+    <div class="row">
+      <div class="col-4 col-md-3 mt-3 ">
+        <div class="card" style="width: 16rem;">
+          <img src="./image/card images/mi2.webp" class="card-img-top" alt="..." style="height: 16rem;">
           <div class="card-body">
             <h5 class="card-title">Redmi 5 pro</h5>
             <h6>Price:<span class="price">10000</span></h6>
@@ -217,9 +221,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="./image/card images/saree.png" class="card-img-top" alt="...">
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 16rem;">
+          <img src="./image/card images/saree.png" class="card-img-top" alt="..." style="height: 16rem;">
           <div class="card-body">
             <h5 class="card-title">Kanchi Saree</h5>
             <h6>Price:<span class="price">800</span></h6>
@@ -238,9 +242,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="./image/card images/T-shirt.png" class="card-img-top" alt="..." style="height: 285px;">
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 16rem;">
+          <img src="./image/card images/T-shirt.png" class="card-img-top" alt="..." style="height: 16rem;">
           <div class="card-body">
             <h5 class="card-title">Black T-shirt</h5>
             <h6>Price:<span class="price">400</span></h6>
@@ -259,9 +263,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="./image/card images/teddy.png" class="card-img-top" alt="...">
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 16rem;">
+          <img src="./image/card images/teddy.png" class="card-img-top" alt="..." style="height: 16rem;">
           <div class="card-body">
             <h5 class="card-title">Teddy</h5>
             <h6>Price:<span class="price">600</span></h6>
@@ -292,9 +296,9 @@
           <h1 class="text-center">Men section</h1>
         </div>
         <div class="row mt-5">
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./men section/shirt2.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/shirt2.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">T-Shirt</h5>
                 <h6>Price:<span class="price">300</span></h6>
@@ -313,9 +317,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./men section/shirt1.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/shirt1.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">Blue Shirt</h5>
                 <h6>Price:<span class="price">1000</span></h6>
@@ -334,9 +338,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./men section/tshirt1.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/tshirt1.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">T-Shirt</h5>
                 <h6>Price:<span class="price">400</span></h6>
@@ -355,9 +359,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./men section/whiteshirt.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/whiteshirt.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">White Shite</h5>
                 <h6>Price:<span class="price">1400</span></h6>
@@ -368,6 +372,48 @@
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star"></i>
                   <span>(5000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/paint.webp" class="card-img-top" alt="..." style="height: 16rem;">
+              <div class="card-body">
+                <h5 class="card-title">Black Paint</h5>
+                <h6>Price:<span class="price">1100</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(5500)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./men section/shirt.webp" class="card-img-top" alt="..." style="height: 16rem;">
+              <div class="card-body">
+                <h5 class="card-title">Blue Shite</h5>
+                <h6>Price:<span class="price">1200</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>(6600)</span>
                 </div>
                 <div class="d-flex justify-content-between mt-3">
                   <a href="#" class="btn btn-primary">Details</a>
@@ -391,9 +437,9 @@
           <h1 class="text-center">Women section</h1>
         </div>
         <div class="row mt-5">
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./women section/paint.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/paint.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">Kurutas</h5>
                 <h6>Price:<span class="price">600</span></h6>
@@ -412,9 +458,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./women section/saree2.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/saree2.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">Cotton Saree</h5>
                 <h6>Price:<span class="price">700</span></h6>
@@ -433,9 +479,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./women section/saree3.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/saree3.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">Saree </h5>
                 <h6>Price:<span class="price">10000</span></h6>
@@ -454,11 +500,53 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./women section/women3.webp" class="card-img-top" alt="...">
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/women3.webp" class="card-img-top" alt="..." style="height: 16rem;">
               <div class="card-body">
                 <h5 class="card-title">Kuruta & Dupatta</h5>
+                <h6>Price:<span class="price">1000</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/saree.png" class="card-img-top" alt="..." style="height: 16rem;">
+              <div class="card-body">
+                <h5 class="card-title">Red Saree</h5>
+                <h6>Price:<span class="price">5000</span></h6>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(1000)</span>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-primary">Details</a>
+                  <a href="#" class="btn btn-warning">Add Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-3">
+            <div class="card" style="width: 16rem;">
+              <img src="./women section/saree1.webp" class="card-img-top" alt="..." style="height: 16rem;">
+              <div class="card-body">
+                <h5 class="card-title">slik saree</h5>
                 <h6>Price:<span class="price">1000</span></h6>
                 <div>
                   <i class="fa-solid fa-star"></i>
@@ -545,31 +633,31 @@
             <div class="">
               <ul class="list-unstyled">
                 <li class="my-2"><span class="custom-check"></span> <a href="#"
-                    class="text-white text-decoration-none  fs-5">Home</a></li>
+                    class="text-white text-decoration-none  fs-6">Home</a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href="#"
-                    class="text-white text-decoration-none  fs-5">About Us</a></li>
+                    class="text-white text-decoration-none  fs-6">About Us</a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href="#"
-                    class="text-white text-decoration-none  fs-5">Career</a></li>
+                    class="text-white text-decoration-none  fs-6">Career</a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href="#"
-                    class="text-white text-decoration-none  fs-5">Flipkart storeis</a></li>
+                    class="text-white text-decoration-none  fs-6">Flipkart storeis</a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href="#"
-                    class="text-white text-decoration-none  fs-5">Corprate Information</a></li>
+                    class="text-white text-decoration-none  fs-6">Corprate Information</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-3">
-            <h3>Group Of Comapny</h3>
+            <h3>Comapny</h3>
             <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
             <div>
               <ul class="list-unstyled">
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none fs-5">Myntra</a></li>
+                    class="text-white text-decoration-none fs-6">Myntra</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none fs-5">Flipkart whole sale</a></li>
+                    class="text-white text-decoration-none fs-6">Flipkart whole sale</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none fs-5">Clear Trip</a></li>
+                    class="text-white text-decoration-none fs-6">Clear Trip</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none fs-5">shopy</a></li>
+                    class="text-white text-decoration-none fs-6">shopy</a></li>
               </ul>
             </div>
           </div>
@@ -579,33 +667,33 @@
             <div>
               <ul class="list-unstyled">
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">Payments</a></li>
+                    class="text-white text-decoration-none  fs-6">Payments</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none  fs-5">Shopping</a></li>
+                    class="text-white text-decoration-none  fs-6">Shopping</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none  fs-5">Canselation & returns </a></li>
+                    class="text-white text-decoration-none  fs-6">Canselation & returns </a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">FAQ</a></li>
+                    class="text-white text-decoration-none  fs-6">FAQ</a></li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none  fs-5">Report Ingrigment</a></li>
+                    class="text-white text-decoration-none  fs-6">Report Ingrigment</a></li>
               </ul>
             </div>
           </div>
           <div class=" col-md-3">
-            <h3>Consumer Policy</h3>
+            <h3>Policy Us</h3>
             <div class="bg-warning p-1 rounded-pill d-inline-block w-50"></div>
             <div class="">
               <ul class="list-unstyled">
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">Cancelation & returns </a> </li>
+                    class="text-white text-decoration-none  fs-6">Cancelation & returns </a> </li>
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">Term os use </a></li>
+                    class="text-white text-decoration-none  fs-6">Term os use </a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">security</a></li>
+                    class="text-white text-decoration-none  fs-6">security</a></li>
                 <li class="my-2"><span class="custom-check"></span> <a href=""
-                    class="text-white text-decoration-none  fs-5">privacy</a> </li>
+                    class="text-white text-decoration-none  fs-6">privacy</a> </li>
                 <li class="my-2"><span class="custom-check"></span><a href=""
-                    class="text-white text-decoration-none  fs-5">Sitemap</a></li>
+                    class="text-white text-decoration-none  fs-6">Sitemap</a></li>
               </ul>
             </div>
           </div>
@@ -675,7 +763,7 @@
       <div class="modal-content">
         <div class="bg-warning p-1 border-lg"></div>
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
+          <h1 class="modal-title fs-6" id="staticBackdropLabel">Change Password</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -722,7 +810,7 @@
       <div class="modal-content">
         <div class="bg-warning p-1 border-lg"></div>
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Welcome to flipkart</h1>
+          <h1 class="modal-title fs-6" id="staticBackdropLabel">Welcome to flipkart</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -998,10 +1086,10 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-4" id="order-check"
+          <h1 class="modal-title fs-5" id="order-check"
             style="display: block; display: block; font-weight: 700; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
             Your Cart</h1>
-          <h1 class="modal-title fs-4" id="check-out-h" style="display: none;">Check Out</h1>
+          <h1 class="modal-title fs-5" id="check-out-h" style="display: none;">Check Out</h1>
         </div>
         <div class="modal-body table-responsive">
           <table class="table caption-top data-table">
@@ -1045,7 +1133,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-4" id="order-check"
+          <h1 class="modal-title fs-5" id="order-check"
             style="display: block; font-weight: 700; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
             CheckOut Details</h1>
         </div>
