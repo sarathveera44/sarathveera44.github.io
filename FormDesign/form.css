@@ -1,0 +1,101 @@
+*{
+    padding: auto;
+    margin: auto;
+    /* box-sizing: border-box; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: rgb(2, 24, 65);
+    background: linear-gradient(90deg, rgba(152, 147, 173, 0.589) 0%, rgb(48, 48, 134) 30%, rgb(59, 172, 79) 97%);
+    background-attachment: fixed;
+    margin: 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(216,214,212);
+    box-shadow: rgb(0,0,0) 0px 5px 15px;
+    width: 410px;
+    border-radius: 5px;
+}
+.header{
+    text-align: center;
+    background-color:#2a0846;
+    color: #f0f0f0;
+    padding: 20px 30px;
+    border: 1px solid #494848;
+    border-radius: 2px;
+}
+.form{
+    padding: 20px 30px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position:relative;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 1px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    font-size:12px;
+    width: 92%;
+    padding: 8px;
+}
+.form-control::placeholder{
+    color: #2a0845;
+}
+.form-control i{
+    position: absolute;
+    right: 10px;
+    top: 33px;
+    visibility: hidden;
+}
+.form-control span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    font-style: italic;
+    visibility: hidden;
+}
+.form-control.success input{
+    border-color: rgb(50, 182, 50);
+}
+.form-control.error input{
+   border-color: #da321f;
+}
+.form-control.error span{
+    color: #da321f;
+    visibility: visible;
+}
+.form-control.success i.fa-circle-check{
+    visibility: visible;
+    color: rgb(50, 182, 50);
+}
+.form-control.error i.fa-circle-exclamation{
+    visibility: visible;
+    color: #da321f;
+}
+.form #submit{
+    background-color: #2a0846;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all .5s;
+}
+.form #submit:hover{
+    background-color: #6441aa;
+}
